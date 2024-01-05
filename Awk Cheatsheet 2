@@ -1,0 +1,28 @@
+AWK CHEATSHEET 2
+
+FUNCTIONS - Pass the variables into the awk functions used inside the action space.
+
+Syntax
+
+awk '{print <function($0)>}' filename
+
+1. index(s, t) - returns position of 's' whereever 't' occurs
+
+    awk '{print index($0, "Her")}' filename
+
+2. length(s) - returns the length of string 's'
+
+    awk '{print length($1)}' filename
+
+3. rand() - returns a seemingly random float between 0 and 1
+
+    awk '{print $0, rand()}' filename
+
+4. substr(s, index, len) - returns the substring of 's' starting at 'index' and of length 'len'
+
+    awk '{print substr($1, 1, 5)}' filename
+
+5. srand() - used with rand() to print random number(s)
+
+    awk 'BEGIN {srand()} {print rand()}' filename
+
