@@ -1,0 +1,36 @@
+AWK CHEATSHEET
+
+
+1. Prints every field of every line
+
+    awk '{print $0}' filename 
+
+2. Prints 1st field of every line 
+
+    awk '{print $1}' filename
+
+3. Prints 1st and 2nd fields with NO SPACE of every line
+    
+    awk '{print $1 $2}' filename
+
+4. Prints 1st and 2nd fields with SPACE of every line
+ 
+    awk '{print $1, $2}' filename
+
+5. Prints the 1st field of 1st line
+
+    awk 'N==1{print $1}' filename 
+
+6. Prints the 1st and 2nd field with NO SPACE of the 2nd line
+
+    awk 'N==2{print $1 $2}' filename
+
+7. Prints the 1st and 2nd field with SPACE of the 2nd line
+
+    awk 'N==2{print $1, $2}' filename
+
+8. Prints nothing
+
+    awk 'N==0{print $1}' filename
+
+9. 
