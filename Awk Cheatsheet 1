@@ -1,4 +1,4 @@
-AWK CHEATSHEET
+# AWK CHEATSHEET
 
 Awk is a simple language that is used in the command line to alter the output of a file.
 Awk can also be used in a shell script.
@@ -14,7 +14,7 @@ awk <action> <name of file>    OR     uname -a | awk <action>
 
     awk '{print $0}' filename 
 
-2. Prints 1st field of every line 
+2. Print 1st field of every line 
 
     awk '{print $1}' filename
 
